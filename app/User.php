@@ -41,4 +41,16 @@ class User extends Authenticatable
 
         return $this->hasMany(Discussion::class);
     }
+
+
+    /**
+     * A user has many replies
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     *
+     */
+    public function replies(){
+
+        return $this->hasMany(Reply::class);
+    }
 }
